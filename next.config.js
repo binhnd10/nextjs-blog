@@ -3,6 +3,15 @@ module.exports = {
   reactStrictMode: true,
   pageExtensions: ['html', 'mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
 
+  async rewrites() {
+    return [
+      {
+        source: '/test3/abc3',
+        destination: '/test3/abc3.html',
+      },
+    ]
+  },
+
   webpack: (
     config,
     { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
